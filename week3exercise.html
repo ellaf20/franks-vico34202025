@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 3 Exercise</title>
+</head>
+<body>
+    <h2>Week 3 Exercise</h2>
+    <p id="output"></p>
+    
+    <script>
+        let name = "Julia";
+        let age = 25;
+        let city = "New York";
+
+        document.getElementById("output").innerHTML = 
+            "Name: " + name + "<br>Age: " + age + "<br>City: " + city + "<br><br>";
+
+        name = "Pete";
+        age = 30;
+        city = "Los Angeles";
+
+        document.getElementById("output").innerHTML += 
+            "Updated Name: " + name + "<br>Updated Age: " + age + "<br>Updated City: " + city + "<br><br>";
+
+        let fullName = name + " Smith";
+        document.getElementById("output").innerHTML += "Full Name: " + fullName + "<br><br>";
+
+        let num1 = 10;
+        let num2 = 5;
+        let sum = num1 + num2;
+        let difference = num1 - num2;
+        let product = num1 * num2;
+        let quotient = num1 / num2;
+
+        document.getElementById("output").innerHTML += 
+            "Addition: " + sum + "<br>" +
+            "Subtraction: " + difference + "<br>" +
+            "Multiplication: " + product + "<br>" +
+            "Division: " + quotient;
+    </script>
+</body>
+</html>
