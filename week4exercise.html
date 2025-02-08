@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 4 Exercise</title>
+</head>
+<body>
+    <h1>Week 4 Exercise</h1>
+    <p id="result"></p>
+
+    <script>
+        let age = 21;
+        let favoriteColor = "green";
+        let score = 85;
+
+        if (age >= 18) {
+            console.log("You are an adult.");
+            document.getElementById("result").innerHTML += "You are an adult.<br>";
+        }
+
+        if (favoriteColor === "green") {
+            console.log("Green is a sick color!");
+            document.getElementById("result").innerHTML += "Green is a sick color!<br>";
+        } else {
+            console.log("That's a cool color too!");
+            document.getElementById("result").innerHTML += "That's a cool color too!<br>";
+        }
+
+        if (score >= 90) {
+            console.log("Excellent!");
+            document.getElementById("result").innerHTML += "Excellent score!<br>";
+        } else if (score >= 75) {
+            console.log("Good job!");
+            document.getElementById("result").innerHTML += "Good job!<br>";
+        } else {
+            console.log("Keep trying!");
+            document.getElementById("result").innerHTML += "Keep trying, you can do it!<br>";
+        }
+
+        let day = "Wednesday";
+
+        switch (day) {
+            case "Monday":
+                console.log("Start of the week! Garfield hates them.");
+                document.getElementById("result").innerHTML += "Start of the workweek!<br>";
+                break;
+            case "Wednesday":
+                console.log("Hump Day!");
+                document.getElementById("result").innerHTML += "Midweek hustle!<br>";
+                break;
+            case "Friday":
+                console.log("TGIF!");
+                document.getElementById("result").innerHTML += "TGIF!<br>";
+                break;
+            default:
+                console.log("Have a great day!");
+                document.getElementById("result").innerHTML += "Have a great day!<br>";
+        }
+    </script>
+</body>
+</html>
