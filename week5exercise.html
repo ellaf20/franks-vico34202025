@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multidimensional Arrays</title>
+</head>
+<body>
+    <h2>Menu</h2>
+    <ul id="menu"></ul>
+
+    <script>
+        const menuItems = [
+            ["home.html", "Home"],
+            ["about.html", "About Us"],
+            ["services.html", "Services"],
+            ["contact.html", "Contact"],
+            ["socials.html", "Socials"]
+        ];
+
+        const menuList = document.getElementById("menu");
+
+        for (let i = 0; i < menuItems.length; i++) {
+            let listItem = document.createElement("li");
+            let link = document.createElement("a");
+            
+            link.href = menuItems[i][0]; 
+            link.textContent = menuItems[i][1]; 
+            
+            listItem.appendChild(link);
+            menuList.appendChild(listItem);
+        }
+    </script>
+</body>
+</html>
