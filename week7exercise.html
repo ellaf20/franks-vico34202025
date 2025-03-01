@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 Exercise</title>
+</head>
+<body>
+    <h2>Sample Form</h2>
+    <form id="sampleForm">
+        <label for="textField">Text:</label>
+        <input type="text" id="textField" name="textField"><br><br>
+
+        <label for="numberField">Number:</label>
+        <input type="number" id="numberField" name="numberField"><br><br>
+
+        <label>
+            <input type="checkbox" id="checkboxField" name="checkboxField"> Check me
+        </label><br><br>
+
+        <label>Choose an option:</label><br>
+        <input type="radio" id="option1" name="radioGroup" value="Option 1">
+        <label for="option1">Option 1</label><br>
+        <input type="radio" id="option2" name="radioGroup" value="Option 2">
+        <label for="option2">Option 2</label><br><br>
+
+        <label for="dropdownField">Choose one:</label>
+        <select id="dropdownField" name="dropdownField">
+            <option value="Choice 1">Choice 1</option>
+            <option value="Choice 2">Choice 2</option>
+        </select><br><br>
+
+        <label for="emailField">Email:</label>
+        <input type="email" id="emailField" name="emailField"><br><br>
+
+        <button type="submit" onclick="buttonFunction(event)">Submit</button>
+    </form>
+
+    <p id="output"></p>
+
+    <script>
+        function buttonFunction(event) {
+            event.preventDefault(); // Prevents page refresh
+            
+            let textValue = document.getElementById("textField").value;
+            let numberValue = document.getElementById("numberField").value;
+            let checkboxValue = document.getElementById("checkboxField").checked;
+            let radioValue = document.querySelector('input[name="radioGroup"]:checked')?.value || "None";
+            let dropdownValue = document.getElementById("dropdownField").value;
+            let emailValue = document.getElementById("emailField").value;
+
+            let output = `Text: ${textValue}<br>
+                          Number: ${numberValue}<br>
+                          Checkbox Checked: ${checkboxValue}<br>
+                          Radio Selection: ${radioValue}<br>
+                          Dropdown Selection: ${dropdownValue}<br>
+                          Email: ${emailValue}`;
+
+            document.getElementById("output").innerHTML = output;
+        }
+    </script>
+</body>
+</html>
