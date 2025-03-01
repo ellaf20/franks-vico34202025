@@ -6,28 +6,29 @@
     <title>Week 7 Exercise</title>
 </head>
 <body>
-    <h2>Sample Form</h2>
-    <form id="sampleForm">
-        <label for="textField">Text:</label>
+    <h2>Interest Form</h2>
+    <form id="interestForm">
+        <label for="textField">Name:</label>
         <input type="text" id="textField" name="textField"><br><br>
 
-        <label for="numberField">Number:</label>
+        <label for="numberField">Age:</label>
         <input type="number" id="numberField" name="numberField"><br><br>
 
         <label>
-            <input type="checkbox" id="checkboxField" name="checkboxField"> Check me
+            <input type="checkbox" id="checkboxField" name="checkboxField"> I would like to be emailed updates
         </label><br><br>
 
-        <label>Choose an option:</label><br>
+        <label>Choose a color:</label><br>
         <input type="radio" id="option1" name="radioGroup" value="Option 1">
-        <label for="option1">Option 1</label><br>
+        <label for="option1">Red</label><br>
         <input type="radio" id="option2" name="radioGroup" value="Option 2">
-        <label for="option2">Option 2</label><br><br>
+        <label for="option2">Blue</label><br><br>
 
-        <label for="dropdownField">Choose one:</label>
+        <label for="dropdownField">Gender</label>
         <select id="dropdownField" name="dropdownField">
-            <option value="Choice 1">Choice 1</option>
-            <option value="Choice 2">Choice 2</option>
+            <option value="Choice 1">Male</option>
+            <option value="Choice 2">Female</option>
+            <option value="Choice 3">Non-binary</option>
         </select><br><br>
 
         <label for="emailField">Email:</label>
@@ -40,7 +41,7 @@
 
     <script>
         function buttonFunction(event) {
-            event.preventDefault(); // Prevents page refresh
+            event.preventDefault(); 
             
             let textValue = document.getElementById("textField").value;
             let numberValue = document.getElementById("numberField").value;
