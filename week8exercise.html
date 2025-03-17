@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Array Exercise</title>
+    <style>
+        .color-box {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>JavaScript Array Manipulation</h2>
+    <div id="output"></div>
+    <div id="color-boxes"></div>
+
+    <script>
+        let colors = ["Red", "Blue", "Green"];
+        displayArray("Initial Array:", colors);
+        
+        colors.push("Yellow", "Purple", "Orange");
+        displayArray("After Adding Colors:", colors);
+        
+        colors.sort();
+        displayArray("Sorted Array:", colors);
+        
+        colors.pop();
+        displayArray("After Removing Last Item:", colors);
+        
+        document.getElementById("output").innerHTML += `<p>Second Item: ${colors[1]}</p>`;
+        
+        let slicedColors = colors.slice(1, 4);
+        displayArray("Sliced Array (indexes 1 to 3):", slicedColors);
+        
+        let colorBoxContainer = document.getElementById("color-boxes");
+        colors.forEach(color => {
+            let div = document.createElement("div");
+            div.className = "color-box";
+            div.style.backgroundColor = color.toLowerCase();
+            colorBoxContainer.appendChild(div);
+        });
+        
+        function displayArray(message, array) {
+            document.getElementById("output").innerHTML += `<p>${message} ${array.join(", ")}</p>`;
+        }
+    </script>
+</body>
+</html>
